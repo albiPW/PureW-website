@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 262.1 83.3% 57.8%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+
+    /* Aurora variables */
+    --white: rgba(255, 255, 255, 1);
+    --black: rgb(10, 25, 41);
+    --transparent: rgba(0, 0, 0, 0);
+    --acqua-100: rgba(42, 248, 205, 0.15);
+    --acqua-200: rgba(42, 248, 205, 0.3);
+    --acqua-300: rgba(42, 248, 205, 0.45);
+    --acqua-400: rgba(42, 248, 205, 0.6);
+    --acqua-500: rgba(42, 248, 205, 1);
+    --dark-blue: rgb(10, 25, 41);
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 210 20% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 210 20% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 262.1 83.3% 57.8%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 262.1 83.3% 57.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[rgb(10,25,41)] text-foreground;
+    background-attachment: fixed;
+    scroll-padding-top: 80px; /* Add padding for fixed header */
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 50% 50%, 50% 50%;
+  }
+  50% {
+    background-position: 0% 100%, 100% 0%;
+  }
+  100% {
+    background-position: 50% 50%, 50% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-aurora {
+    animation: aurora 10s linear infinite;
+  }
+
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+}
+
+.site-bg {
+  background-color: rgb(10, 25, 41); /* dark-blue */
+  position: relative;
+  overflow: hidden;
+}
+
+.site-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(42, 248, 205, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(42, 248, 205, 0.03) 0%, transparent 40%);
+  z-index: 0;
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, rgba(42, 248, 205, 0.15), rgba(10, 25, 41, 0.15));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fix per dispositivi touch */
+@media (hover: none) {
+  header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 50 !important;
+  }
+}
+
+/* Rimuovi colore viola dai pulsanti ghost */
+.mobile-menu-button.hover\:bg-transparent:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.mobile-menu-button.hover\:bg-transparent:focus {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mobile-menu-button.hover\:bg-transparent:active {
+  background-color: transparent !important;
+}
+
+/* Store badge styles */
+.store-badge {
+  display: inline-block;
+  width: 160px;
+  height: 48px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.store-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ensure Apple Store badge has the same visual size */
+.store-badge:first-child .store-badge-img {
+  transform: scale(1.06);
+  transform-origin: center;
+}
