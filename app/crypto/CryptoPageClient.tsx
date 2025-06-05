@@ -498,37 +498,47 @@ export default function CryptoPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold text-dark-blue mb-3">Crypto General Risk Disclosure</h3>
-              <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
-                View <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <a href="/purew-documentation/general-risk-disclosure.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
+                  View <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold text-dark-blue mb-3">Crypto Terms and Conditions</h3>
-              <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
-                View <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <a href="/purew-documentation/crypto-terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
+                  View <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold text-dark-blue mb-3">Crypto Card User Agreement APPENDIX</h3>
-              <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
-                View <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <h3 className="text-lg font-semibold text-dark-blue mb-3">Crypto Card User Agreement APPENDIX A</h3>
+              <a href="/purew-documentation/Card-User-Agreement.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
+                  View <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold text-dark-blue mb-3">Crypto Card User Agreement APPENDIX</h3>
-              <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
-                View <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <h3 className="text-lg font-semibold text-dark-blue mb-3">Crypto Card User Agreement APPENDIX B</h3>
+              <a href="/purew-documentation/Payment-Card-Terms-and-Conditions-.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
+                  View <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold text-dark-blue mb-3">Payment Card Terms</h3>
-              <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
-                View <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <a href="/purew-documentation/Payment-Card-Terms-and-Conditions-.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-acqua text-acqua hover:bg-acqua/10">
+                  View <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
